@@ -58,14 +58,16 @@ namespace Aula09EstoqueDeProdutosTer200623
 
                     while (contador < produtos.Count) //enquanto o contador (que é 0) for menor que o produto.Count (que ta contando os produtos) ele roda
                     {
+
+                        string palavra = produtos[contador];
                         //Console.WriteLine($"Nome do produto: {produtos[ contador]}"); //supondo que temos 3 itens, o contador fala que tem 3 itens (0,1,2) depois que roda
                         //ele joga produtos para posição 2
                         //Aumentou novamente, ele sai do looping sozinho porque o 3 não tem, ai ele sai
 
-                        string primeiraLetra = texto.Substring(0, 1); // f
+                        string primeiraLetra = palavra.Substring(0, 1); // f
                         primeiraLetra = primeiraLetra.ToUpper(); // F
 
-                        string segundaParte = texto.Substring(1, texto.Length); //anta
+                        string segundaParte = palavra.Substring(1, palavra.Length-1); //anta
 
                         string palavraCompleta = primeiraLetra + segundaParte; // F + anta == >>>> Fanta <<<<
 
