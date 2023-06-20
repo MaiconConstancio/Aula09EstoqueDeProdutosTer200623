@@ -25,6 +25,8 @@ namespace Aula09EstoqueDeProdutosTer200623
                 {
                     Console.WriteLine("Digite o nome do produto: ");
                     string produto = Console.ReadLine();
+                    produto = produto.ToLower(); //idependente de como a pessoa vai escrever, o sistema vai reconhecer como minusculo substituindo o ||
+                    
 
                     if (produtos.Contains(produto)) //if (produtos.Contains( é o codigo que mostra oque contem dentro de uma lista, e depois vem o nome da variavel
                                                     //que esta guardada na variavel PRODUTO nesse caso
@@ -59,8 +61,14 @@ namespace Aula09EstoqueDeProdutosTer200623
                         //Console.WriteLine($"Nome do produto: {produtos[ contador]}"); //supondo que temos 3 itens, o contador fala que tem 3 itens (0,1,2) depois que roda
                         //ele joga produtos para posição 2
                         //Aumentou novamente, ele sai do looping sozinho porque o 3 não tem, ai ele sai
-                        
-                        
+
+                        string primeiraLetra = texto.Substring(0, 1); // f
+                        primeiraLetra = primeiraLetra.ToUpper(); // F
+
+                        string segundaParte = texto.Substring(1, texto.Length); //anta
+
+                        string palavraCompleta = primeiraLetra + segundaParte; // F + anta == >>>> Fanta <<<<
+
                         texto += produtos[contador] + " , ";
                         contador++;
                     }
